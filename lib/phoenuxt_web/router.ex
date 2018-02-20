@@ -1,11 +1,7 @@
 defmodule PhoenuxtWeb.Router do
   use PhoenuxtWeb, :router
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
-  scope "/api", PhoenuxtWeb do
-    pipe_through :api
+  if Mix.env == :dev do
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: PhoenuxtWeb.Schema
   end
 end
