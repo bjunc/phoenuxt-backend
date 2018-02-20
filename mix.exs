@@ -38,7 +38,16 @@ defmodule Phoenuxt.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+
+      # auth
+      {:guardian, "~> 1.0.1"},
+
+      # GraphQL
+      {:absinthe, "~> 1.4.6"},
+      {:absinthe_plug, "~> 1.4.2"},
+      {:absinthe_ecto, "~> 0.1.3"},
+      {:absinthe_phoenix, "~> 1.4.0"}
     ]
   end
 
